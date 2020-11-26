@@ -9,6 +9,8 @@ Pod::Spec.new do |spec|
     spec.author       = { "Luis Manuel Ramirez Vargas" => "Luis_Manuel.Ramirez_Vargas@syngenta.com" }
     spec.source       = { :http => "https://github.com/LuisManuelRamirezVargas/iXpandSDKWrapper/raw/main/dist/iXpandSDKWrapper.zip" }
     spec.vendored_frameworks = 'iXpandSDKlib.framework'
-    spec.libraries = 'libc++'
+    s.xcconfig = {
+        'CLANG_CXX_LIBRARY' => 'libc++'
+    }
 
-  end
+end
